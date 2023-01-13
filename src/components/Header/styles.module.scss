@@ -1,0 +1,17 @@
+.header {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+
+  .header__content {
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-right: 40px;
+    }
+  }
+}

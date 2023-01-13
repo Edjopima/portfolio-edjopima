@@ -1,0 +1,24 @@
+$background: #EDEDED;
+$blue-night: #071F44;
+$beige: #B4A497;
+$khaki: #A17F73;
+
+h1 {
+  font-family: 'Cremona';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  text-align: start;
+  margin: 0;
+
+  /* Blue Night */
+  color: $blue-night;
+}
+
+span {
+  font-family: 'Sora', sans-serif;
+  font-size: 20px;
+  line-height: 25px;
+  color: $blue-night;
+  text-align: start;
+}

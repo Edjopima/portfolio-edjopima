@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "Cremona";
+  src: url('../fonts/Cremona.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+  
+@font-face {
+  font-family: "Sora";
+  src: url('../fonts/Sora-Thin.ttf');
+  font-weight: thin;
+  font-style: normal;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Sora','Cremona', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: #071F44;
+  background: #EDEDED;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: #071F44;
+    background: #EDEDED;
+  }
+}
