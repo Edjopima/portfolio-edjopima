@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/globals.css';
+import '../styles/text.scss'
+import '../styles/buttons.scss'
+import styles from '../styles/About.module.scss'
+---
+
+<Layout title="Eduardo Piña">
+  <main class={styles.container}>
+    <img class={styles.image} src="/foto-about.png" alt="">
+    <div class="ml-40 mr-20">
+      <h2>Building User-Friendly Apps since 2020</h2>
+      <div class={styles.description}>
+        <span>I am an electronic engineer who decided to change the direction of his career to focus on software development. In the last 3 years, I’ve worked in front-end development, using  technologies like React JS, Vue JS, Vuetify, Tailwind CSS, Next JS, React Native, Flutter, among others. I'm passionate about learning new things and am always looking for opportunities to improve my skills and stay up to date with the latest trends in software development.
+          <br><br>
+          Currently, I work as a front-end developer at Keybe.ai, where we boost sales teams through artificial intelligence</span>
+      </div>
+      <div class="flex items-center">
+        <a href="https://github.com/edjopima" target="_blank">
+          <button class="primary">MY GITHUB</button>
+        </a>
+        <a href="/contact">
+          <button class="primary ml-8">CONTACT ME</button></a>
+      </div>
+    </div>
+  </main>
+</Layout>

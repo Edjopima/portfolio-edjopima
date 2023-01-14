@@ -15,6 +15,18 @@ h1 {
   color: $blue-night;
 }
 
+h2 {
+  font-family: 'Cremona';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  text-align: start;
+  margin: 0;
+
+  /* Blue Night */
+  color: $blue-night;
+}
+
 span {
   font-family: 'Sora', sans-serif;
   font-size: 20px;
