@@ -49,6 +49,7 @@
       right:60px;
       min-width: 610px;
       z-index: 1;
+      animation: reveal 1s;
     }
 
     .home__image_background {
@@ -59,7 +60,34 @@
       right:40px;
       opacity: 0.6;
       min-width: 610px;
+      animation: reveal_background 1s;
     }
+  }
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  16% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes reveal_background {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 0.6;
+    transform: translateX(0);
   }
 }
 
