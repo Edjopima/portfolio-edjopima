@@ -19,6 +19,11 @@ $background: #EDEDED;
       margin-right: 40px;
     }
   }
+
+  .logo {
+    height: 60px;
+    width: 60px;
+  }
 }
 
 @media only screen and (max-width: 800px) {
@@ -29,6 +34,11 @@ $background: #EDEDED;
       span {
         margin-right: 10px;
       }
+    }
+
+    .logo {
+      height: 40px;
+      width: 40px;
     }
   }
 }
