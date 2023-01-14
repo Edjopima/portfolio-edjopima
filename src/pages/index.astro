@@ -16,7 +16,7 @@ import aboutStyles from '../styles/About.module.scss'
 			</div>
 			<span>Frontend developer</span>
 			<div class={styles.home__buttons}>
-				<a href="/about">
+				<a href="#about">
 					<button class='primary'>WHO AM I?</button>
 				</a>
 				<a href="/contact">
@@ -24,8 +24,8 @@ import aboutStyles from '../styles/About.module.scss'
 			</div>
 		</div>
 		<div class={styles.home__imgContainer}>
-			<img src="/foto.png" alt="home" class={styles.home__image} style="position: absolute; bottom: 0; right:60px; z-index: 1;" />
-			<img src={fondo} alt="home" class={styles.home__image} style="position: absolute; bottom: 0; right:40px; opacity: 0.6;" />
+			<img src="/foto.png" alt="home" class={styles.home__image}/>
+			<img src={fondo} alt="home" class={styles.home__image_background}/>
 		</div>
 	</main>
 	<main id="about" class={aboutStyles.container}>

@@ -66,3 +66,20 @@ small {
   from, to { border-color: $blue-night }
   50% { border-color: transparent; }
 }
+
+// small tablet and iphone screen
+
+@media only screen and (max-width: 1350px) {
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  span {
+    font-size: 14px;
+  }
+  small {
+    font-size: 12px;
+  }
+}

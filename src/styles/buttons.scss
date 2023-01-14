@@ -28,3 +28,12 @@ $khaki: #A17F73;
     border:none
   }
 }
+
+// mobile styles
+@media only screen and (max-width: 800px) {
+  .primary {
+    padding: 14px 12px;
+
+    font-size: 16px;
+  }
+}
