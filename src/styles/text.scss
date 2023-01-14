@@ -35,6 +35,14 @@ span {
   text-align: start;
 }
 
+span {
+  font-family: 'Sora', sans-serif;
+  font-size: 14px;
+  line-height: 25px;
+  color: $blue-night;
+  text-align: start;
+}
+
 .typewriter h1 {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .05em solid transparent; /* The typwriter cursor */
