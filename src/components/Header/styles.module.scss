@@ -1,3 +1,5 @@
+$background: #EDEDED;
+
 .header {
   height: 100px;
   width: 100%;
@@ -5,6 +7,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
+  position: fixed;
+  z-index: 2;
+  background-color: $background;
 
   .header__content {
     display: flex;
