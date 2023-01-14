@@ -28,7 +28,7 @@ import aboutStyles from '../styles/About.module.scss'
 			<img src={fondo} alt="home" class={styles.home__image_background}/>
 		</div>
 	</main>
-	<main id="about" class={aboutStyles.container}>
+	<main id="about" class={`${aboutStyles.container} reveal`}>
     <img class={aboutStyles.image} src="/foto-about.png" alt="">
     <div class={aboutStyles.description_container}>
       <h2>Building User-Friendly Apps since 2020</h2>
@@ -46,4 +46,25 @@ import aboutStyles from '../styles/About.module.scss'
       </div>
     </div>
   </main>
+
+	<script lang="js">
+		function reveal() {
+			var reveals = document.querySelectorAll(".reveal");
+			for (var i = 0; i < reveals.length; i++) {
+				var windowHeight = window.innerHeight;
+				var elementTop = reveals[i].getBoundingClientRect().top;
+				var elementVisible = 150;
+				if (elementTop < windowHeight - elementVisible) {
+					reveals[i].classList.add("active");
+				} else {
+					reveals[i].classList.remove("active");
+				}
+			}
+		}
+
+		window.addEventListener("scroll", reveal);
+
+		// To check the scroll position on page load
+		reveal();
+	</script>
 </Layout>
