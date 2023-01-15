@@ -1,0 +1,28 @@
+---
+import styles from './Landing.module.scss'
+---
+
+<section id="home" class={styles.home}>
+  <div class={styles.home__textContainer}>
+    <div class={`${styles.home__title} typewriter`}>
+      <h1>Hi, I'm Eduardo</h1>
+    </div>
+    <div class={`${styles.home_mobileTitle} typewriter`}>
+      <h1>Hi</h1>
+      <h1>I'm Eduardo</h1>
+    </div>
+    <span>A Frontend developer passionate of tech, movies and learning.</span>
+    <div class={styles.home__buttons}>
+      <a href="#about">
+        <button class='primary'>WHO AM I?</button>
+      </a>
+      <a href="/contact">
+        <button class='primary'>CONTACT ME</button></a>
+    </div>
+  </div>
+  <div class={styles.home__imgContainer}>
+    <div class={styles.home__imgContainer_gradient}></div>
+    <div class={styles.home__imgContainer_blueFilter}></div>
+    <img src="/home.png" alt="" />
+  </div>
+</section>

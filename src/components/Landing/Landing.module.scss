@@ -1,0 +1,134 @@
+$background: #EDEDED;
+$blue-night: #071F44;
+
+.container {
+  height: calc(100vh - 100px);
+}
+
+.home_mobileTitle {
+  display: none;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  .home__textContainer {
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    flex-wrap: wrap;
+    padding-left: 40px;
+    padding-top:300px;
+
+    span {
+      margin-right: 60px;
+    }
+
+    .home__buttons {
+      display:flex;
+      width: 100%;
+      min-width: 480px;
+      align-items: center;
+      margin-top: 60px;
+  
+      button {
+        margin-right: 40px;
+      }
+    }
+  }
+
+  .home__imgContainer {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    animation: reveal 1s ease-out;
+
+    .home__imgContainer_blueFilter {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.3;
+      // to right gradient from background to blue-night
+      background: linear-gradient(to right, $background 0%, $blue-night 50%);
+    }
+
+    .home__imgContainer_gradient {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: linear-gradient(to right, $background 0%, transparent 50%);
+    }
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .home_mobileTitle {
+    display: block;
+    h1 {
+      font-size: 52px;
+    }
+  }
+
+  .home__title {
+    display: none;
+  }
+  .home {
+    padding-top: 100px;
+
+    .home__textContainer {
+      width: 100%;
+      height: 50%;
+      padding-left: 10px;
+      padding-top: 0;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      span {
+        margin-right: 10px;
+      }
+
+      .home__buttons {
+        margin-top: 30px;
+        flex-direction: column;
+        align-items: flex-start;
+        button {
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .home__imgContainer {
+      display: none;
+    }
+  }
+}

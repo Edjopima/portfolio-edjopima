@@ -5,12 +5,20 @@
   font-style: normal;
 }
   
-@font-face {
+ @font-face {
   font-family: "Sora";
   src: url('../fonts/Sora-Thin.ttf');
   font-weight: thin;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "Sora";
+  src: url('../fonts/Sora-Light.ttf');
+  font-weight: light;
+  font-style: normal;
+}
+
 
 html,
 body {
