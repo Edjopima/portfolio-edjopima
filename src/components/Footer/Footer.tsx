@@ -1,6 +1,6 @@
 import React from 'react'
-import { AiFillHeart, AiFillGithub, AiOutlineTwitter, AiFillLinkedin, AiOutlineInstagram } from 'react-icons/ai'
-import { FaTelegramPlane } from 'react-icons/fa'
+import { AiFillHeart, AiFillGithub, AiOutlineTwitter, AiFillLinkedin, AiOutlineInstagram } from 'react-icons/ai/index'
+import { FaTelegramPlane } from 'react-icons/fa/index'
 import '../../styles/text.scss'
 import styles from './Footer.module.scss'
 
