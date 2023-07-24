@@ -8,7 +8,7 @@ const ContactForm: React.FC = () => {
   const [message, setMessage] = useState("");
   const [subject, setSubject] = useState("");
   const [error, setError] = useState("");
-  const [sending, setSending] = useState(true);
+  const [sending, setSending] = useState(false);
   const handleSubmit = () => {
     if ( name === '' || email === '' || subject === '' || message === '' ){
         setError('All fields are required');
