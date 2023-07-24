@@ -8,34 +8,29 @@ const ContactForm: React.FC = () => {
   const [message, setMessage] = useState("");
   const [subject, setSubject] = useState("");
   const [error, setError] = useState("");
-  const [sending, setSending] = useState(false);
-//   const handleSubmit = () => {
-//     if ( name === '' || email === '' || subject === '' || message === '' ){
-//         setError('all fields are required');
-//     } else{
-//         setError('');
-//         setMessageStatus('Sending...');
-//         fetch('https://portfolio-server-nodemailer.herokuapp.com/sendMail', {
-//             method: 'POST',
-//             headers: {'Content-Type': 'application/json'},
-//             body: JSON.stringify({
-//                 name,
-//                 email,
-//                 subject,
-//                 message
-//             })
-//         })
-//         .then(response => response.json())
-//         .then(data=>setMessageStatus('message sent'))
-//         .catch(error => console.error('error'));
-//     }
-// }
-  const sendMessage = () => {
-    console.log('====================================');
-    console.log('Sending message');
-    console.log(name, email, message);
-    console.log('====================================');
-  };
+  const [sending, setSending] = useState(true);
+  const handleSubmit = () => {
+    if ( name === '' || email === '' || subject === '' || message === '' ){
+        setError('All fields are required');
+    } else{
+        setSending(true);
+        setError('');
+        
+        fetch('https://morning-mountain-3140.fly.dev/sendMail', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                name,
+                email,
+                subject,
+                message
+            })
+        })
+        .then(response => response.json())
+        .then(data=>setSending(false))
+        .catch(error => setError('Something went wrong, please try again later'));
+    }
+}
 
   return (
     <div className={styles.Container}>
@@ -53,7 +48,9 @@ const ContactForm: React.FC = () => {
       <div className="flex w-full">
         <input placeholder="Message" value={message} onChange={e => setMessage(e.target.value)} />
       </div>
-        <button className="primary" onClick={sendMessage}>Send</button>
+        <button style={{width:85, height:60}} className={sending?'primary loading': 'primary'} onClick={handleSubmit}>
+          {sending ? '' : 'Send'}
+        </button>
       </div>
     </div>
   );
