@@ -86,7 +86,7 @@ const ChatView: React.FC =  () => {
           style={{display: "flex", alignItems: "center"}}
           >
             <img className={styles.loading_message_logo} src={logo} alt="logo"/>
-            <span style={{marginLeft: 10}}>I'm getting ready to answer your questions...</span>
+            <span style={{marginLeft: 10}}>I'm getting ready to answer your questions, it may take a few seconds...</span>
           </div>
         </div>}
         {(messages.length === 0 && !isLoading) && <div className={styles.chat_messages_empty}>
