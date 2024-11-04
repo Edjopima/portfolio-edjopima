@@ -21,7 +21,7 @@ const isChat = Astro.url.pathname === "/chat";
 		<title>{title}</title>
 	</head>
 	<body>
-		<Header isChat={isChat} />
+		<Header client:load isChat={isChat} />
 		<slot />
 		{!isChat && <Footer/>}
 	</body>
