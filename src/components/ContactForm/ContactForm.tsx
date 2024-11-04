@@ -52,7 +52,7 @@ const ContactForm: React.FC = () => {
       <div className="flex w-full">
         <input placeholder="Message" value={message} onChange={e => setMessage(e.target.value)} />
       </div>
-        <button disabled={sending || success} style={{width:85, height:60}} className={sending?'primary loading': 'primary'} onClick={handleSubmit}>
+        <button disabled={sending || success} style={{minWidth:100, height:60}} className={sending?'primary loading': 'primary'} onClick={handleSubmit}>
           {sending ? '' : success ? 'Message sent successfully' : 'Send'}
         </button>
       </div>
