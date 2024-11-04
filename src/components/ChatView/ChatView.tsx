@@ -1,6 +1,6 @@
 import dayjs from "dayjs";
 import React from "react";
-import { AiOutlineSend } from "react-icons/ai";
+import { AiOutlineSend } from "react-icons/ai/index";
 import styles from "./ChatView.module.scss";
 
 interface Message {
@@ -48,8 +48,8 @@ const ChatView: React.FC = () => {
       <div className={styles.chat_messages}>
         {messages.map((message) => (
           <div key={message.id} className={`${message.sender === "user" ? styles.user_message : styles.bot_message}`}>
-            <span>{message.text}</span>
             <span className={styles.message_time}>{dayjs(message.createdAt).format("hh:mm A")}</span>
+            <span>{message.text}</span>
           </div>
         ))}
       </div>
