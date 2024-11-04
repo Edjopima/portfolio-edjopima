@@ -4,13 +4,15 @@ $blue-night: #071F44;
   display: flex;
   flex-direction: column;
   height: calc(100vh);
-  padding: 40px 60px;
+  padding: 40px 0;
 }
 
 .chat_messages {
   flex: 1;
   overflow-y: auto;
-  padding-top: 100px;
+  margin-top: 100px;
+  padding: 0 60px;
+  margin-bottom: 20px;
 }
 
 .user_message {
@@ -55,10 +57,11 @@ $blue-night: #071F44;
 .chat_input {
   display: flex;
   align-items: center;
+  margin: 0 60px;
   border-top: 1px solid rgba(7, 31, 68, 0.6);
   border-bottom: 1px solid rgba(7, 31, 68, 0.6);
   padding: 10px;
-  width: 100%;
+  width: calc(100% - 120px);
 
   input {
     flex: 1;
@@ -100,6 +103,21 @@ $blue-night: #071F44;
 .message_time {
   font-size: 0.6rem !important;
   opacity: 0.5;
+}
+
+.loading_message_logo {
+  height: 15px;
+  width: 15px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @media only screen and (max-width: 700px) {

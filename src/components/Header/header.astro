@@ -1,12 +1,13 @@
 ---
-import styles from './styles.module.scss'
-import logo from '../../assets/logo.svg'
+import logo from '../../assets/logo.svg';
+import styles from './styles.module.scss';
 const { isChat } = Astro.props;
 ---
 <header class={styles.header}>
   <a href="/"><img class={styles.logo} src={logo} alt="logo"/></a>
   <div class={`${styles.header__content} ${isChat ? styles.header__content_chat : ''}`}>
     <!-- <a href="/resume"><span>Resume</span></a> -->
+    <a href="/chat"><span>Chat</span> <span style="font-size: 8px; margin: 0; position: absolute; top: -10px; left: 90px;">BETA</span></a>
     <a href="/contact"><span>Contact</span></a>
     <a href="#about"><span>About</span></a>
   </div>

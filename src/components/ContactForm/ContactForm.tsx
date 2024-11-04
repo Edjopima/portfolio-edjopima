@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import '../../styles/buttons.scss';
 import styles from './ContactForm.module.scss';
 
@@ -9,6 +9,7 @@ const ContactForm: React.FC = () => {
   const [subject, setSubject] = useState("");
   const [error, setError] = useState("");
   const [sending, setSending] = useState(false);
+  const [success, setSuccess] = useState(false);
   const handleSubmit = () => {
     if ( name === '' || email === '' || subject === '' || message === '' ){
         setError('All fields are required');
@@ -27,7 +28,10 @@ const ContactForm: React.FC = () => {
             })
         })
         .then(response => response.json())
-        .then(data=>setSending(false))
+        .then(data=>{
+          setSending(false)
+          setSuccess(true)
+        })
         .catch(error => setError('Something went wrong, please try again later'));
     }
 }
@@ -48,8 +52,8 @@ const ContactForm: React.FC = () => {
       <div className="flex w-full">
         <input placeholder="Message" value={message} onChange={e => setMessage(e.target.value)} />
       </div>
-        <button style={{width:85, height:60}} className={sending?'primary loading': 'primary'} onClick={handleSubmit}>
-          {sending ? '' : 'Send'}
+        <button disabled={sending || success} style={{width:85, height:60}} className={sending?'primary loading': 'primary'} onClick={handleSubmit}>
+          {sending ? '' : success ? 'Message sent successfully' : 'Send'}
         </button>
       </div>
     </div>
