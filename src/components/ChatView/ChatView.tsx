@@ -76,18 +76,29 @@ const ChatView: React.FC =  () => {
 
   const parseMessage = (message: Message) => {
     const regex = /(\[([^\]]+)\]\(([^\)]+)\))/g;
-    return message.content[0].text.value.replace(regex, '<a style="text-decoration: underline;" href="$3">$3</a>');
+    return message.content[0].text.value.replace(regex, '<a target="_blank" style="text-decoration: underline;" href="$3">$3</a>');
   }
   return (
     <div className={styles.chat_container}>
       <div className={styles.chat_messages} id="chat-messages">
+        {(isLoading && messages.length === 0) && <div className={styles.loading_message}>
+          <div
+          style={{display: "flex", alignItems: "center"}}
+          >
+            <img className={styles.loading_message_logo} src={logo} alt="logo"/>
+            <span style={{marginLeft: 10}}>I'm getting ready to answer your questions...</span>
+          </div>
+        </div>}
+        {(messages.length === 0 && !isLoading) && <div className={styles.chat_messages_empty}>
+          <span>Hi! I'm ready to answer any questions you have about me and my work.</span>
+        </div>}
         {messages.map((message) => (
           <div key={message.id} className={`${message.role === "user" ? styles.user_message : styles.bot_message}`}>
             <span className={styles.message_time}>{dayjs(message.createdAt).format("hh:mm A")}</span>
             <span dangerouslySetInnerHTML={{__html: parseMessage(message)}} />
           </div>
         ))}
-        {isLoading && <div className={styles.loading_message}>
+        {(isLoading && messages.length > 0) && <div className={styles.loading_message}>
           <img className={styles.loading_message_logo} src={logo} alt="logo"/>
         </div>}
       </div>
