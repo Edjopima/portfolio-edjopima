@@ -1,0 +1,107 @@
+$blue-night: #071F44;
+
+.chat_container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh);
+  padding: 40px;
+}
+
+.chat_messages {
+  flex: 1;
+  overflow-y: auto;
+  padding-top: 100px;
+}
+
+.user_message {
+  text-align: right;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  span {
+    font-size: 0.9rem;
+  }
+}
+
+.bot_message {
+  text-align: left;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  span {
+    font-size: 0.9rem;
+  }
+}
+
+.message_time {
+  font-size: 0.2rem;
+}
+
+.chat_footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+
+  span {
+    font-size: 0.6rem;
+    line-height: 1;
+    font-family: 'Sora';
+    font-weight: light;
+  }
+}
+
+.chat_input {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid rgba(7, 31, 68, 0.6);
+  border-bottom: 1px solid rgba(7, 31, 68, 0.6);
+  padding: 10px;
+  width: 100%;
+
+  input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: $blue-night;
+    background-color: transparent;
+    padding: 10px;
+    font-family: 'Sora';
+    font-weight: light;
+  }
+
+  input::placeholder {
+    color: $blue-night;
+    font-family: 'Sora';
+    font-weight: light;
+    opacity: 0.6;
+  }
+
+  button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    transition: all 0.1s ease-in-out;
+  }
+
+  button:active {
+    opacity: 0.5;
+    transform: scale(0.9);
+  }
+
+  svg {
+    color: $blue-night;
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .chat_container {
+    padding: 20px;
+  }
+}

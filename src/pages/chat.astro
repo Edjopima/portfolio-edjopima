@@ -1,10 +1,8 @@
 ---
+import ChatView from "../components/ChatView/ChatView";
 import Layout from "../layouts/Layout.astro";
-import styles from "../styles/chat.module.scss";
 ---
 
 <Layout title="Eduardo Piña">
-  <main class={styles.container}>
-    <h1>Chat</h1>
-  </main>
+  <ChatView client:load />
 </Layout>

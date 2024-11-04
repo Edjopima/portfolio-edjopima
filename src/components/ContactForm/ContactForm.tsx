@@ -35,7 +35,7 @@ const ContactForm: React.FC = () => {
   return (
     <div className={styles.Container}>
       <h1>Let's talk</h1>
-      <span>Complete this form and i'll answer as soon as possible</span>
+      <span>Complete this form and I'll answer as soon as possible</span>
       <span className={styles.error}>{error}</span>
     <div className={styles.ContactForm}>
       <div className="flex w-full">

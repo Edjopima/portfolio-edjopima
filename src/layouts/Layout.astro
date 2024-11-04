@@ -23,7 +23,7 @@ const isChat = Astro.url.pathname === "/chat";
 	<body>
 		<Header isChat={isChat} />
 		<slot />
-		<Footer />
+		{!isChat && <Footer/>}
 	</body>
 </html>
 <style is:global>

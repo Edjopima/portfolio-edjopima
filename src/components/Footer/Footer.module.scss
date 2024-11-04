@@ -7,7 +7,7 @@ $blue-night: #071F44;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1rem 60px;
   z-index: 5;
   background-color: transparent;
 }
@@ -22,30 +22,17 @@ $blue-night: #071F44;
   }
 
   h2 {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 }
 
 .Footer__icon {
   margin: 10px 4px;
   color: $background;
-}
+  transition: transform 0.2s ease;
 
-.Footer__icon :hover {
-  animation: wave 0.5s linear;
-}
-
-@keyframes wave {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  50% {
-    transform: rotate(20deg);
-  }
-
-  100% {
-    transform: rotate(0deg);
+  &:hover {
+    transform: scale(1.2);
   }
 }
 

@@ -11,10 +11,10 @@ const Footer: React.FC = () => {
         <span>Let's get in touch!</span>
         <div className='flex item-center'>
           <a className={styles.Footer__icon} href="https://github.com/edjopima" target="_blank" rel="noreferrer">
-            <AiFillGithub size={20}/>
+            <AiFillGithub size={30}/>
           </a>
           <a className={styles.Footer__icon} href="https://www.linkedin.com/in/edjopima/" target="_blank" rel="noreferrer">
-            <AiFillLinkedin size={20}/>
+            <AiFillLinkedin size={30}/>
           </a>
         </div>
       </div>

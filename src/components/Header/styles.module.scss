@@ -7,7 +7,7 @@ $blue-night: #071F44;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 20px 60px;
   position: fixed;
   z-index: 3;
   background-color: transparent;
@@ -17,7 +17,7 @@ $blue-night: #071F44;
     align-items: center;
 
     span {
-      margin-right: 40px;
+      margin-left: 40px;
       font-weight: light;
       color: $background;
     }
@@ -28,7 +28,7 @@ $blue-night: #071F44;
     align-items: center;
 
     span {
-      margin-right: 40px;
+      margin-left: 40px;
       font-weight: light;
       color: $blue-night;
     }
@@ -42,11 +42,11 @@ $blue-night: #071F44;
 
 @media only screen and (max-width: 700px) {
   .header {
-    padding: 10px 10px;
+    padding: 10px 20px;
 
     .header__content {
       span {
-        margin-right: 10px;
+        margin-left: 10px;
         color: $blue-night;
       }
     }
