@@ -8,7 +8,8 @@ export interface Props {
 
 const { title } = Astro.props;
 
-const isChat = Astro.url.pathname === "/chat";
+const isChatOrContact = Astro.url.pathname === "/chat" || Astro.url.pathname === "/chat/" || Astro.url.pathname === "/contact";
+const isChat = Astro.url.pathname === "/chat" || Astro.url.pathname === "/chat/";
 ---
 
 <!DOCTYPE html>
@@ -21,7 +22,7 @@ const isChat = Astro.url.pathname === "/chat";
 		<title>{title}</title>
 	</head>
 	<body>
-		<Header client:load isChat={isChat} />
+		<Header client:load isChat={isChatOrContact} />
 		<slot />
 		{!isChat && <Footer/>}
 	</body>
