@@ -23,6 +23,17 @@ $blue-night: #071F44;
     }
   }
 
+  .header__content_chat {
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-right: 40px;
+      font-weight: light;
+      color: $blue-night;
+    }
+  }
+
   .logo {
     height: 60px;
     width: 60px;

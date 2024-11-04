@@ -1,11 +1,14 @@
 ---
 import Footer from '../components/Footer/Footer';
-import Header from '../components/Header/header.astro'
+import Header from '../components/Header/header.astro';
+
 export interface Props {
 	title: string;
 }
 
 const { title } = Astro.props;
+
+const isChat = Astro.url.pathname === "/chat";
 ---
 
 <!DOCTYPE html>
@@ -18,9 +21,9 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<Header />
+		<Header isChat={isChat} />
 		<slot />
-		<Footer/>
+		<Footer />
 	</body>
 </html>
 <style is:global>
